@@ -1,0 +1,36 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="products.controller.View1" displayBlock="true">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <sap.ui.comp.smartfilterbar:SmartFilterBar xmlns:sap.ui.comp.smartfilterbar="sap.ui.comp.smartfilterbar" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" class="sapContrastPlus" smartVariant="Element sap.ui.comp.smartvariants.SmartVariantManagement#__bar0-variant" hSpacing="0" expandAdvancedArea="true" showGoButton="true" id="bar0" cd:w5g.dt.context="/ProductCollection" entityType="Product" advancedMode="true" enableBasicSearch="true" resourceUri="{ProductID}">
+                <sap.ui.comp.smartfilterbar:controlConfiguration>
+                    <sap.ui.comp.smartfilterbar:ControlConfiguration id="configuration0"/>
+                </sap.ui.comp.smartfilterbar:controlConfiguration>
+            </sap.ui.comp.smartfilterbar:SmartFilterBar>
+            <sap.ui.comp.smarttable:SmartTable 
+            useTablePersonalisation="true" 
+            showTablePersonalisation="true" 
+            showDetailsButton="true" 
+            xmlns:sap.ui.comp.smarttable="sap.ui.comp.smarttable" 
+            xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" 
+            width="100%" 
+            direction="Column" 
+            fitContainer="true" 
+            tableType="ResponsiveTable" 
+            header="Products" 
+            enableAutoBinding="true" 
+            id="table0" 
+            useInfoToolbar="On" 
+            cd:w5g.dt.context="/ProductCollection" 
+            entitySet="ProductCollection" 
+            smartFilterId="bar0"
+            useExportToExcel="true" 
+                        beforeExport="onBeforeExport" 
+                        useVariantManagement="true" 
+                        showRowCount="true" 
+                        persistencyKey="SmartTableAnalytical_Explored" 
+                        class="sapUiResponsiveContentPadding" 
+                        enableAutoColumnWidth="true" 
+                        editTogglable="true" />
+        </content>
+    </Page>
+</mvc:View>
